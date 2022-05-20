@@ -17,7 +17,7 @@ class Deployer {
     Script script
    
     def parse(path) {
-       script.echo("File path is" + path )
+       script.echo("File path is " + path )
         // Reading file from local directory
         FileInputStream file = new FileInputStream(
                 new File(path));
