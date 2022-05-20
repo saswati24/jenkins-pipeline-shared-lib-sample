@@ -87,7 +87,7 @@ class GroovyExcelParser {
         obj += "</object>"
     }
 
-    public static void main(String[]args) {
+    def call() {
 //        File file = new File(".");
 //        for(String fileNames : file.list()) System.out.println(fileNames);
         def filename = 'temp.xlsx'
