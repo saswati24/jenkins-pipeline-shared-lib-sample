@@ -15,7 +15,7 @@ import org.apache.poi.ss.util.*
 import org.apache.poi.ss.usermodel.*
 import java.io.*
 
-class GroovyExcelParser {
+public class GroovyExcelParser {
     //http://poi.apache.org/spreadsheet/quick-guide.html#Iterator
 
     def parse(path) {
