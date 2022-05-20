@@ -61,20 +61,20 @@ class Deployer {
         def colIndex = cell.getColumnIndex()
         def value = ""
         switch (cell.getCellType()) {
-            case Cell.CELL_TYPE_STRING:
+            case CellType.STRING:
                 value = cell.getRichStringCellValue().getString();
                 break;
-            case Cell.CELL_TYPE_NUMERIC:
+            case CellType.NUMERIC:
                 if (DateUtil.isCellDateFormatted(cell)) {
                     value = cell.getDateCellValue();
                 } else {
                     value = cell.getNumericCellValue();
                 }
                 break;
-            case Cell.CELL_TYPE_BOOLEAN:
+            case CellType.BOOLEAN:
                 value = cell.getBooleanCellValue();
                 break;
-            case Cell.CELL_TYPE_FORMULA:
+            case CellType.FORMULA:
                 value = cell.getCellFormula();
                 break;
             default:
