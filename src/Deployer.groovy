@@ -85,10 +85,10 @@ class Deployer {
     }
    
        def runFile() {
-       File file = new File(".");
-       for(String fileNames : file.list()) script.echo(fileNames);
-        script.echo(script.pwd)
-        def filename = 'temp.xlsx'
+//        File file = new File(".");
+//        for(String fileNames : file.list()) script.echo(fileNames);
+//         script.echo(script.pwd)
+        def filename = 'C:\Users\jaidi\OneDrive\Documents\GitHub\simple-java-maven-app\temp.xlsx'
 //         GroovyExcelParser parser = new GroovyExcelParser()
         def (headers, rows) = parse(filename)
         println 'Headers'
