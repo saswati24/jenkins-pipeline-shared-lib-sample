@@ -101,17 +101,15 @@ class Deployer {
 //         GroovyExcelParser parser = new GroovyExcelParser()
         
         def (headers, rows) = parse(filename)
-        script.echo('Headers')
-        println '------------------'
+        script.echo("Headers")
+        script.echo("------------------")
         headers.each { header ->
-            println header
+            script.echo( header )
         }
-        println "\n"
-        println 'Rows'
-        println '------------------'
+        script.echo( "\n" + "Rows" + "\n" + "------------------")
         rows.each { row ->
-            println toXml(headers, row)
-            println row[1]
+            script.echo(toXml(headers, row))
+            script.echo(row[1])
         }
     }
 
