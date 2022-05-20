@@ -4,6 +4,12 @@
    @Grab(group = 'org.apache.commons', module = 'commons-lang3', version = '3.6')]
 )
 import org.apache.commons.lang3.StringUtils
+import org.apache.poi.ss.usermodel.*
+import org.apache.poi.hssf.usermodel.*
+import org.apache.poi.xssf.usermodel.*
+import org.apache.poi.ss.util.*
+import org.apache.poi.ss.usermodel.*
+import java.io.*
 
 class Deployer {
     int tries = 0
