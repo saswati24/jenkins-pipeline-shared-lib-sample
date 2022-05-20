@@ -116,7 +116,8 @@ class Deployer {
         }
     }
 
-    def run() {
+    def run(String path) {
+       script.echo(path)
         while (tries < 2) {
             Thread.sleep(1000)
             tries++
