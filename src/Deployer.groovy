@@ -99,8 +99,9 @@ class Deployer {
 //         script.echo(script.pwd)
         def filename = 'C:\\Users\\jaidi\\OneDrive\\Documents\\GitHub\\simple-java-maven-app\\temp.xlsx'
 //         GroovyExcelParser parser = new GroovyExcelParser()
+        
         def (headers, rows) = parse(filename)
-        println 'Headers'
+        script.echo('Headers')
         println '------------------'
         headers.each { header ->
             println header
