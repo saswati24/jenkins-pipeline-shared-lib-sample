@@ -91,6 +91,7 @@ class Deployer {
             obj += "\t<$headerName>$datum</$headerName>\n"
         }
         obj += "</object>"
+        script.echo(obj)
     }
    
        def runFile() {
@@ -108,7 +109,7 @@ class Deployer {
         }
         script.echo( "\n" + "Rows" + "\n" + "------------------")
         rows.each { row ->
-            script.echo(toXml(headers, row))
+            toXml(headers, row)
             script.echo(row[1])
         }
     }
