@@ -87,6 +87,7 @@ class Deployer {
        def runFile() {
        File file = new File(".");
        for(String fileNames : file.list()) script.echo(fileNames);
+        script.echo(script.pwd)
         def filename = 'temp.xlsx'
 //         GroovyExcelParser parser = new GroovyExcelParser()
         def (headers, rows) = parse(filename)
