@@ -85,8 +85,8 @@ class Deployer {
     }
    
        def runFile() {
-//        File file = new File(".");
-//        for(String fileNames : file.list()) System.out.println(fileNames);
+       File file = new File(".");
+       for(String fileNames : file.list()) System.out.println(fileNames);
         def filename = 'temp.xlsx'
 //         GroovyExcelParser parser = new GroovyExcelParser()
         def (headers, rows) = parse(filename)
@@ -105,7 +105,7 @@ class Deployer {
     }
 
     def run() {
-        while (tries < 10) {
+        while (tries < 2) {
             Thread.sleep(1000)
             tries++
             script.echo("tries is numeric: " + StringUtils.isAlphanumeric("" + tries))
