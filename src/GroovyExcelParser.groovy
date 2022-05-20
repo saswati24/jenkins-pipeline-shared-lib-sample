@@ -91,8 +91,8 @@ class GroovyExcelParser {
 //        File file = new File(".");
 //        for(String fileNames : file.list()) System.out.println(fileNames);
         def filename = 'temp.xlsx'
-        GroovyExcelParser parser = new GroovyExcelParser()
-        def (headers, rows) = parser.parse(filename)
+//         GroovyExcelParser parser = new GroovyExcelParser()
+        def (headers, rows) = parse(filename)
         println 'Headers'
         println '------------------'
         headers.each { header ->
@@ -102,7 +102,7 @@ class GroovyExcelParser {
         println 'Rows'
         println '------------------'
         rows.each { row ->
-            println parser.toXml(headers, row)
+            println toXml(headers, row)
             println row[1]
         }
     }
