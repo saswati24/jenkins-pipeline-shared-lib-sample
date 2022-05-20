@@ -16,19 +16,27 @@ class Deployer {
     Script script
    
     def parse(path) {
-        InputStream inp = new FileInputStream(path)
-        Workbook wb = WorkbookFactory.create(inp);
-        Sheet sheet = wb.getSheetAt(0);
+        // Reading file from local directory
+        FileInputStream file = new FileInputStream(
+                new File(path));
 
-        Iterator<Row> rowIt = sheet.rowIterator()
-        Row row = rowIt.next()
+        // Create Workbook instance holding reference to
+        // .xlsx file
+        XSSFWorkbook workbook = new XSSFWorkbook(file);
+        // Get first/desired sheet from the workbook
+        XSSFSheet sheet = workbook.getSheetAt(0);
+
+        // Iterate through each rows one by one
+        Iterator<Row> rowIterator = sheet.iterator();
+        Row row = rowIterator.next()
         def headers = getRowData(row)
 
         def rows = []
-        while(rowIt.hasNext()) {
-            row = rowIt.next()
+        while (rowIterator.hasNext()) {
+            row = rowIterator.next()
             rows << getRowData(row)
         }
+        file.close()
         [headers, rows]
     }
 
