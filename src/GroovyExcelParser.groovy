@@ -88,7 +88,7 @@ public class GroovyExcelParser {
     def run() {
 //        File file = new File(".");
 //        for(String fileNames : file.list()) System.out.println(fileNames);
-        def filename = 'temp.xlsx'
+        def filename = 'C:\Users\'aidi\OneDrive\Documents\GitHub\simple-java-maven-app\temp.xlsx'
 //         GroovyExcelParser parser = new GroovyExcelParser()
         def (headers, rows) = parse(filename)
         println 'Headers'
