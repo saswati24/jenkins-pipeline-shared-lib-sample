@@ -21,24 +21,19 @@ class Deployer {
         XSSFWorkbook workbook = new XSSFWorkbook();
 
         // Creating a blank Excel sheet
-        XSSFSheet sheet
-                = workbook.createSheet("student Details");
+        XSSFSheet sheet = workbook.createSheet("student Details");
 
         // Creating an empty TreeMap of string and Object][]
         // type
-        Map<String, Object[]> data
-                = new TreeMap<>();
+        Map<String, Object[]> data  = new TreeMap<>();
 
         // Writing data to Object[]
         // using put() method
-        data.put("1",
-                new Object[] { "ID", "NAME", "LASTNAME" });
-        data.put("2",
-                new Object[] { 1, "Pankaj", "Kumar" });
-        data.put("3",
-                new Object[] { 2, "Prakashni", "Yadav" });
-        data.put("4", new Object[] { 3, "Ayan", "Mondal" });
-        data.put("5", new Object[] { 4, "Virat", "kohli" });
+        data.put("1",new Object[] { "ID", "NAME", "LASTNAME" });
+        data.put("2",new Object[] { 1, "Pankaj", "Kumar" });
+        data.put("3",new Object[] { 2, "Prakashni", "Yadav" });
+        data.put("4",new Object[] { 3, "Ayan", "Mondal" });
+        data.put("5",new Object[] { 4, "Virat", "kohli" });
 
         // Iterating over data and writing it to sheet
         Set<String> keyset = data.keySet();
