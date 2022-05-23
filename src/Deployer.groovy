@@ -25,6 +25,7 @@ class Deployer {
 
         // Create Workbook instance holding reference to
         // .xlsx file
+        HSSFWorkbook workbook2 = new HSSFWorkbook(file);
         XSSFWorkbook workbook = new XSSFWorkbook(file);
         // Get first/desired sheet from the workbook
         XSSFSheet sheet = workbook.getSheetAt(0);
