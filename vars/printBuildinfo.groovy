@@ -1,9 +1,9 @@
 #!/usr/bin/env groovy
 
 // https://mvnrepository.com/artifact/org.apache.poi/poi
-@Grapes(
-    @Grab(group='org.apache.poi', module='poi', version='5.2.2')
-)
+// @Grapes(
+//     @Grab(group='org.apache.poi', module='poi', version='5.2.2')
+// )
 
 def call(body) {
     def config = [:]
